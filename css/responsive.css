@@ -1,0 +1,277 @@
+/*
+  가장중요한 조건
+  가로스롤은 절대 생기면 안된다.
+  가로스크롤이 생기는이유는
+  - 위드가 살이있는영역 ex)1200 1000px
+  - absolute ->부모한테 무조건 overflow hidden을 줘야됨
+  모바일 확인은 최고 작은 사이즈인 320 (크롬모바일 아이폰se) 확인시 잘나오묜 끝.
+ */
+
+/* 실콘텐츠 + 100 */
+/* 1400 작은pc 사이즈,작은 모니터  */
+
+@media screen and (max-width: 1300px) {
+    /* header */
+    /* main */
+
+    .event_area{
+        display: none !important;
+    }
+        .event_m{
+            display: block !important;
+        }
+
+    .prd_area .top_box{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .prd_area .top_box .txt_wrap{
+        width: 100%;
+    }
+        .prd_area .top_box .img_wrap{
+            width: 100%;
+        }
+            .prd_area .top_box .img_wrap img.prd_frame{
+                width: 100% !important;
+            }
+            .btn_box{
+                position: static;
+                display: inline-block;
+                margin-top: 50px;
+                position: relative;
+            }
+            .btn_box.prd_next{
+                float: right;
+            }
+    .notice_area{
+        flex-direction: column-reverse;
+        padding: 10px 50px 70px;
+    }
+        .notice_area .img_wrap{
+            padding: 0;
+            width: 100%;
+        }
+            .notice_area .txt_wrap{
+                padding: 0;
+                width: 100%;
+            }
+                .notice_area .circle{
+                    top: 50%;
+                    left: 0;
+                    transform: translateY(100%);
+                }
+                    .notice_area .detail-btn{
+                        display: block;
+                        width: 100%;
+                        text-align: center;
+                        margin-bottom: 20px;
+                        padding: 0;
+                    }
+
+    .sub_menu .img_wrap img{
+       height: 100%;
+    }
+
+    /* footer */
+  }
+  
+  
+  /*
+  테블릿
+  중대적인 레이아웃 변화
+  폰트사이즈 줄여준다 아래와같은룰로
+  */
+  @media screen and (max-width: 1024px) {
+
+    header h1{
+        width: 110px;
+    }
+
+    .user_nav{
+        right: 135px;
+    }
+    .user_nav li{
+        width: 30px;
+    }
+    .sns_area li{
+        width: 30px;
+    }
+
+    .prd_area .top_box .txt_wrap{
+        padding: 0;
+        margin-bottom: 50px;
+    }
+        .prd_area .top_box .txt_wrap a{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            padding: 20px 0;
+        }
+        .review_more{
+            border: 1px solid;
+        }
+        .review_more span{
+            border:none;
+        }
+        .prd_area .top_box .img_wrap img.prd_frame{
+            left: 0;
+        }
+        .magazine ul{
+    flex-direction: column;
+}
+      .magazine ul li{
+          width: 100%;
+      }
+   
+}
+
+  /*
+   모바일
+   *대대적 레이아웃 변화
+   사이드 패딩 15~20
+   대폰트 font-size: 38~28
+   중폰트 18~28
+   소폰트 12~ 16
+   웬만한 레이아웃은 1줄 아니면 2줄
+   320으로 가야함
+  */
+  @media screen and (max-width: 768px) {
+      body{
+          
+      }
+
+    header h1{
+        width: 100px;
+    }
+
+    .user_nav{
+        right: 110px;
+    }
+    .user_nav li{
+        width: 30px;
+    }
+    .sns_area li{
+        width: 30px;
+    }
+    .naver_talk{
+        right: 100px;
+        width: 45px;
+    }
+    .top_btn{
+        right: 30px;
+        width: 50px;
+    }
+    
+
+    footer > ul{
+        flex-direction: column;
+    }
+    footer .user_langs_sns{
+            position: inherit;
+    }
+    footer p{
+        line-height: 20px;
+    }
+
+    .prd_area h2{
+        position: static;
+        writing-mode:inherit;
+        margin: 20px 0;
+        font-size: 38px;
+    }
+    .prd_area{
+        padding: 20px;
+    }
+     .prd_slide .prd_wrap{
+    }
+    .prd_slide .prd_wrap .prd-for-hover > img{
+        width: auto;
+        position: relative;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+.prd_area .top_box .txt_wrap strong{
+    font-size: 28px;
+}
+.prd_area .top_box .txt_wrap p{
+    font-size: 18px;
+}
+
+footer .user_info li{
+    margin-right: 10px;
+}
+
+.sub_menu .img_wrap{
+    display: none;
+}
+.sub_menu .sub_menu_wrap{
+        width: 100%;
+    padding: 20px;
+    margin-top: 150px;
+}
+
+
+
+
+@media screen and (max-width: 400px) {
+
+    header h1{
+        left: 20px;
+    }
+.menu{
+    right: 20px;
+}
+
+.user_nav{
+    right: 80px;
+}
+.naver_talk{
+        right: 55px;
+    width: 35px;
+
+    }
+
+.sns_area{
+    left: 20px;
+    
+}
+.top_btn{
+        right: 20px;
+    width: 35px;
+}
+
+
+
+
+
+
+
+
+.prd_slide .prd_wrap .prd-for-hover > img{
+           height: inherit;
+        width: 100%;
+    }
+
+
+    footer h2{
+        margin-bottom: 0;
+    }
+    footer .user_info{
+        flex-direction: column;
+    }
+    footer .user_info li{
+        margin: 20px 0;
+    }
+   
+}
+
+
+
+
+
+
+
+}
